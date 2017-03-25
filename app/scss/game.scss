@@ -1,0 +1,181 @@
+﻿html {
+    line-height: 1.618;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: #212021;
+    font-family: Roboto;
+}
+
+header {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #212021;
+    box-shadow: 0 8px 7px -8px rgba(0,0,0,0.5);
+}
+
+h1 {
+    margin: 0;
+    font-size: 5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem;
+    margin: 0;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-weight: 100;
+}
+
+h3 {
+    margin-top: .25em;
+    margin-bottom: .25em;
+}
+
+form {
+    text-align: center;
+}
+
+.row {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+
+    &::after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+}
+
+label {
+    font-size: 2rem;
+    margin-right: 1rem;
+    float: left;
+}
+
+input {
+    width: 35%;
+    border: 1px solid #C7C5C7;
+    border-radius: 4px;
+    font-size: 2rem;
+    color: #666466;
+    padding: .5rem 1rem;
+    margin: 0;
+    float: right;
+
+    &.error {
+        border-color: red;
+    }
+
+    &:focus, &:active {
+        border-color: #212021;
+        color: #212021;
+        outline: none;
+    }
+
+    &[type=checkbox] {
+        display: none;
+    }
+}
+
+.checkbox {
+    display: block;
+    width: 53px;
+    height: 53px;
+    border: 1px solid #C7C5C7;
+    border-radius: 4px;
+    position: relative;
+    float: right;
+
+    &.checked::after {
+        position: absolute;
+        left: 2px;
+        top: -4px;
+        content: '\2713';
+        color: forestgreen;
+        font-size: 4em;
+        line-height: 1;
+    }
+}
+
+button {
+    font-size: 2rem;
+    border: 2px solid #C7C5C7;
+    border-radius: 4px;
+    padding: .5rem 1rem;
+    color: #666466;
+    background: #fff;
+    cursor: pointer;
+
+    &:hover, &:active {
+        border-color: #212021;
+        color: #212021;
+    }
+}
+
+
+.hand {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+
+    .playerInfo {
+        width: 9rem;
+        margin-right: .5em;
+        float: left;
+
+        h3 {
+            text-align: right;
+        }
+    }
+}
+
+ul {
+    float: left;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 2rem;
+
+    &::after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+}
+
+li {
+    list-style-type: none;
+    float: left;
+    text-align: center;
+
+    span {
+        font-size: 0;
+    }
+}
+
+p {
+    margin-top: 0;
+    text-align: right;
+}
+
+.controls {
+    clear: both;
+    position: fixed;
+    bottom: 1em;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.end-message {
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 0 4rem;
+    clear: both;
+}

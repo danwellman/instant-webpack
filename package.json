@@ -1,0 +1,25 @@
+{
+  "name": "instant-webpack",
+  "version": "1.0.0",
+  "description": "Example project for the Envato Tuts+ course Instant Webpack by Dan Wellman",
+  "main": "app/index.js",
+  "dependencies": {
+    "angular": "^1.6.2"
+  },
+  "devDependencies": {
+    "webpack": "^2.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danwellman/instant-webpack.git"
+  },
+  "author": "Dan Wellman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danwellman/instant-webpack/issues"
+  },
+  "homepage": "https://github.com/danwellman/instant-webpack#readme"
+}

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Blackjack</title>
+    <meta charset="utf-8" />
+</head>
+<body ng-app="blackjack">
+    <header>
+        <h1>Blackjack</h1>
+    </header>
+
+    <div ng-controller="gameCtrl" ng-cloak>
+
+        <form name="player" ng-show="!gameStarted">
+            <h2>Play 21 or bust! Beat the dealer to win big</h2>
+
+            <div class="row">
+                <label for="name">Player name</label><input name="name" ng-model="playerName" ng-class="{ error: !playerName && player.name.$touched }" />
+            </div>
+            <div class="row">
+                <label for="aces">Aces high?</label><input name="aces" type="checkbox" ng-model="acesHigh" /><span class="checkbox" ng-class="{ checked: acesHigh }" ng-click="toggle()"></span>
+            </div>
+
+            <button id="start" ng-click="start()">Start!</button>
+        </form>
+
+        <div ng-show="gameStarted" class="hand">
+            <div class="playerInfo">
+                <h3>Your hand:</h3>
+                <p>score: <b>{{ player.score }}</b></p>
+            </div>
+            <ul>
+                <li ng-repeat="card in player.hand" class="card {{ card.color }} {{ card.suit }} {{ card.name || 'value-' + card.value }}"><span>The {{ card.name || card.value }} of {{ card.suit }}</span></li>
+            </ul>
+        </div>
+
+        <div ng-if="gameStarted && !gameEnded" class="controls">
+            <button ng-click="stick()">Stick</button>
+            <button ng-click="hitMe()">Hit me!</button>
+        </div>
+
+        <div ng-show="gameEnded" class="hand">
+            <div class="playerInfo">
+                <h3>Dealer's hand:</h3>
+                <p>score: <b>{{ dealer.score }}</b></p>
+            </div>
+            <ul>
+                <li ng-repeat="card in dealer.hand" class="card {{ card.color }} {{ card.suit }} {{ card.name || 'value-' + card.value }}"><span>The {{ card.name || card.value }} of {{ card.suit }}</span></li>
+            </ul>
+        </div>
+
+        <div ng-show="gameEnded">
+            <h3 class="end-message">{{finishMessage}}</h3>
+            <div class="controls">
+                <button ng-click="quit()">Quit</button>
+                <button ng-click="restart()">Play again!</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
