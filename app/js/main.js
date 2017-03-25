@@ -1,7 +1,11 @@
 ﻿'use strict';
 
-import {Game} from './game'
+import '../scss/imports.scss';
+import angular from 'angular';
+import {Game} from './game';
+import {reverse} from './extras';
 
+console.log(reverse('its working'));
 angular.module('blackjack', []);
 angular.module('blackjack').controller('gameCtrl', gameCtrl);
 
