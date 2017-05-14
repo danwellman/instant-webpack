@@ -1,6 +1,6 @@
-﻿'use strict';
-
-import {Game} from './game'
+﻿import '../scss/imports.scss'
+import angular from 'angular'
+import { Game } from './game'
 
 angular.module('blackjack', []);
 angular.module('blackjack').controller('gameCtrl', gameCtrl);

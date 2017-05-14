@@ -1,6 +1,4 @@
-﻿'use strict';
-
-import {Deck} from './deck';
+﻿import {Deck} from './deck';
 import {Player} from './player';
 
 class Game {

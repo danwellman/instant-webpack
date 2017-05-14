@@ -1,6 +1,4 @@
-﻿'use strict';
-
-class Card {
+﻿class Card {
     constructor(color, suit, value, name) {
         this.color = color;
         this.suit = suit;

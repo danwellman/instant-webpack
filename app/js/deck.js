@@ -1,6 +1,4 @@
-﻿'use strict';
-
-import {Card} from './card';
+﻿import {Card} from './card';
 
 class Deck {
     constructor(acesHigh) {
